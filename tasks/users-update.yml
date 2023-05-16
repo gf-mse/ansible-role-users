@@ -2,7 +2,7 @@
 
 - name: "Get list of current users to update"
   shell:
-    'getent group | cut -f1 -d:'
+    'getent passwd | cut -f1 -d:'
   register:
     users_present
   changed_when:
